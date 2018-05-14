@@ -23,7 +23,7 @@ export class CurrencyComponent implements OnInit {
           this.my_result = [];
           for (var key in lstresult.rates) {
             if (lstresult.rates.hasOwnProperty(key)) {
-              this.my_result.push({ currency: key, value: lstresult.rates[key] });
+              this.my_result.push({ currency: key, value: formatCurrency(lstresult.rates[key], "en", "") });
             }
           }
         },
