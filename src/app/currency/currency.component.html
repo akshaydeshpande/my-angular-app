@@ -1,0 +1,23 @@
+<h2>Currency Exchange Rates</h2>
+<div class="col-md-8 col-md-offset-2">
+ <div class="form-group">
+   <br />
+  <input type="text" [(ngModel)]="id_currency" class="form-control" placeholder="Enter Currency Symbol. Example: GBP(,AUD,INR)...">
+  <br />
+  <button type="button" class="btn btn-primary" (click)="callCurrencyService()">Get rate</button>
+  <br><br>
+  <h3>Rate Details</h3>
+  <br>
+  <p class="well lead">Exchange rate relative to Euro:
+    </p> 
+    <ul>
+      <li *ngFor="let result of my_result">
+        {{result.currency}} : {{result.value}}
+      </li>
+    </ul>
+  
+  <p class="text-info">Total # of all the service requests including Weather, Movie, and Currency is :
+    <span class="badge">{{this._sharedService.totReqsMade}}</span>
+  </p>
+ </div>
+</div>
